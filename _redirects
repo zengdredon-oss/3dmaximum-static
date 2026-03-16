@@ -1,0 +1,16 @@
+/feed/*        /   301
+/feed          /   301
+/wp-admin/*    /   301
+/wp-login.php  /   301
+/xmlrpc.php    /   301
+/wp-cron.php   /   301
+/wp-json/*     /   301
+
+# Короткие URL из меню → полные пути
+/sozdaniye-3d-animatsii/    /uslugi/sozdaniye-3d-animatsii/    301
+/3d-tury/                   /uslugi/3d-tury/                   301
+/3d-tury/panorama-360/      /uslugi/3d-tury/panorama-360/      301
+/3d-tury/virtualnyie-progulki/  /uslugi/3d-tury/virtualnyie-progulki/  301
+/vr-ar-prilozheniya/        /uslugi/vr-ar-prilozheniya/        301
+/sozdaniye-3d-modeley/      /uslugi/sozdaniye-3d-modeley/      301
+/main/sozdaniye-3d-animatsii/   /uslugi/sozdaniye-3d-animatsii/    301
