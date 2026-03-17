@@ -29,22 +29,18 @@ html{font-size:93.75%;}a,.page-title{color:#34b378;}a:hover,a:focus{color:#00913
 <link rel='stylesheet' id='essential_addons_flickity-css-css'  href='/wp-content/plugins/essential-addons-elementor/assets/css/flickity.css?ver=5.7.14' media='all' />
 <link rel='stylesheet' id='essential_addons_interactive-card-css-css'  href='/wp-content/plugins/essential-addons-elementor/assets/interactive-card/interactive-card.css?ver=5.7.14' media='all' />
 <link rel='stylesheet' id='lbwps-styles-css'  href='/wp-content/plugins/lightbox-photoswipe/assets/ps4/styles/classic.css?ver=5.0.44' media='all' />
-<link rel='stylesheet' id='dashicons-css'  href='/wp-includes/css/dashicons.min.css?ver=5.7.14' media='all' />
 <link rel='stylesheet' id='to-top-css'  href='/wp-content/plugins/to-top/public/css/to-top-public.css?ver=2.2' media='all' />
-<link rel='stylesheet' id='twenty20-style-css'  href='/wp-content/plugins/twenty20/assets/css/twenty20.css?ver=1.5.6' media='all' />
 <link rel='stylesheet' id='elementor-icons-css'  href='/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.10.0' media='all' />
 <link rel='stylesheet' id='elementor-animations-css'  href='/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=3.1.1' media='all' />
 <link rel='stylesheet' id='elementor-frontend-legacy-css'  href='/wp-content/plugins/elementor/assets/css/frontend-legacy.min.css?ver=3.1.1' media='all' />
 <link rel='stylesheet' id='elementor-frontend-css'  href='/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.1.1' media='all' />
 <link rel='stylesheet' id='elementor-post-2798-css'  href='/wp-content/uploads/elementor/css/post-2798.css?ver=1612127884' media='all' />
 <link rel='stylesheet' id='font-awesome-5-all-css'  href='/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css?ver=3.1.1' media='all' />
-<link rel='stylesheet' id='font-awesome-4-shim-css'  href='/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css?ver=3.1.1' media='all' />
 <link rel='stylesheet' id='elementor-global-css'  href='/wp-content/uploads/elementor/css/global.css?ver=1612127884' media='all' />
 <link rel='stylesheet' id='elementor-post-106-css'  href='/wp-content/uploads/elementor/css/post-106.css?ver=1697629498' media='all' />
 <style id='rocket-lazyload-inline-css'>
 .rll-youtube-player{position:relative;padding-bottom:56.23%;height:0;overflow:hidden;max-width:100%;}.rll-youtube-player iframe{position:absolute;top:0;left:0;width:100%;height:100%;z-index:100;background:0 0}.rll-youtube-player img{bottom:0;display:block;left:0;margin:auto;max-width:100%;width:100%;position:absolute;right:0;top:0;border:none;height:auto;cursor:pointer;-webkit-transition:.4s all;-moz-transition:.4s all;transition:.4s all}.rll-youtube-player img:hover{-webkit-filter:brightness(75%)}.rll-youtube-player .play{height:72px;width:72px;left:50%;top:50%;margin-left:-36px;margin-top:-36px;position:absolute;background:url(/wp-content/plugins/rocket-lazy-load/assets/img/youtube.png) no-repeat;cursor:pointer}
 </style>
-<link rel='stylesheet' id='elementor-icons-shared-0-css'  href='/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.1' media='all' />
 <link rel='stylesheet' id='elementor-icons-fa-solid-css'  href='/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=5.15.1' media='all' />
 <link rel='stylesheet' id='elementor-icons-fa-brands-css'  href='/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=5.15.1' media='all' />
 <!--[if IE]>
@@ -54,13 +50,11 @@ flexibility(document.documentElement);
 </script>
 <![endif]-->
 <script src='/wp-includes/js/jquery/jquery.min.js?ver=3.5.1' id='jquery-core-js'></script>
-<script src='/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
 <script src='/wp-content/plugins/essential-addons-elementor/assets/js/flickity.pkgd.min.js?ver=1.0' id='essential_addons_elementor-flickity-js-js' defer></script>
 <script id='to-top-js-extra'>
 var to_top_options = {"scroll_offset":"1000","icon_opacity":"80","style":"icon","icon_type":"dashicons-arrow-up-alt2","icon_color":"#ffffff","icon_bg_color":"#44af5b","icon_size":"40","border_radius":"15","image":"https:\/\/3dmaximum.com\/wp-content\/plugins\/to-top\/admin\/images\/default.png","image_width":"65","image_alt":"","location":"bottom-right","margin_x":"20","margin_y":"50","show_on_admin":"0","enable_autohide":"0","autohide_time":"2","enable_hide_small_device":"1","small_device_max_width":"640","reset":"0"};
 </script>
 <script src='/wp-content/plugins/to-top/public/js/to-top-public.js?ver=2.2' id='to-top-js' defer></script>
-<script src='/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=3.1.1' id='font-awesome-4-shim-js' defer></script>
 <link rel="canonical" href="/portfolio/" />
 <meta name="google-site-verification" content="ioZ2aiKs_GtqbKsr-IVZTBRrOiWc0mstQZ5NrFDgUn4" />
 
@@ -122,6 +116,9 @@ var to_top_options = {"scroll_offset":"1000","icon_opacity":"80","style":"icon",
   });
 })();
 </script>
+<style>/* Replace dashicons arrow for scroll-to-top */
+.dashicons-arrow-up-alt:before { content: ''; display: inline-block; width: 0; height: 0; border-left: 8px solid transparent; border-right: 8px solid transparent; border-bottom: 12px solid currentColor; vertical-align: middle; }
+</style>
 </head>
 
 <body itemtype='https://schema.org/WebPage' itemscope='itemscope' class="page-template page-template-elementor_header_footer page page-id-106 wp-custom-logo ast-desktop ast-page-builder-template ast-no-sidebar astra-3.1.2 ast-header-custom-item-inside ast-single-post ast-inherit-site-logo-transparent ast-normal-title-enabled elementor-default elementor-template-full-width elementor-kit-2798 elementor-page elementor-page-106">
@@ -474,57 +471,14 @@ class="hfeed site" id="page"
 var astra = {"break_point":"921","isRtl":""};
 </script>
 <script src='/wp-content/themes/astra/assets/js/minified/style.min.js?ver=3.1.2' id='astra-theme-js-js' defer></script>
-<script src='/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=7.4.4' id='wp-polyfill-js' defer></script>
-<script id='wp-polyfill-js-after'>
-( 'fetch' in window ) || document.write( '<script src="/wp-includes/js/dist/vendor/wp-polyfill-fetch.min.js?ver=3.0.0"></scr' + 'ipt>' );( document.contains ) || document.write( '<script src="/wp-includes/js/dist/vendor/wp-polyfill-node-contains.min.js?ver=3.42.0"></scr' + 'ipt>' );( window.DOMRect ) || document.write( '<script src="/wp-includes/js/dist/vendor/wp-polyfill-dom-rect.min.js?ver=3.42.0"></scr' + 'ipt>' );( window.URL && window.URL.prototype && window.URLSearchParams ) || document.write( '<script src="/wp-includes/js/dist/vendor/wp-polyfill-url.min.js?ver=3.6.4"></scr' + 'ipt>' );( window.FormData && window.FormData.prototype.keys ) || document.write( '<script src="/wp-includes/js/dist/vendor/wp-polyfill-formdata.min.js?ver=3.0.12"></scr' + 'ipt>' );( Element.prototype.matches && Element.prototype.closest ) || document.write( '<script src="/wp-includes/js/dist/vendor/wp-polyfill-element-closest.min.js?ver=2.0.2"></scr' + 'ipt>' );( 'objectFit' in document.documentElement.style ) || document.write( '<script src="/wp-includes/js/dist/vendor/wp-polyfill-object-fit.min.js?ver=2.3.4"></scr' + 'ipt>' );
-</script>
-<script src='/wp-includes/js/dist/hooks.min.js?ver=d0188aa6c336f8bb426fe5318b7f5b72' id='wp-hooks-js' defer></script>
-<script src='/wp-includes/js/dist/i18n.min.js?ver=6ae7d829c963a7d8856558f3f9b32b43' id='wp-i18n-js' defer></script>
-<script id='wp-i18n-js-after'>
-wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
-</script>
-<script src='/wp-includes/js/dist/vendor/lodash.min.js?ver=4.17.21' id='lodash-js' defer></script>
-<script id='lodash-js-after'>
-window.lodash = _.noConflict();
-</script>
-<script src='/wp-includes/js/dist/url.min.js?ver=7c99a9585caad6f2f16c19ecd17a86cd' id='wp-url-js' defer></script>
-<script id='wp-api-fetch-js-translations'>
-( function( domain, translations ) {
-	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
-	localeData[""].domain = domain;
-	wp.i18n.setLocaleData( localeData, domain );
-} )( "default", {"translation-revision-date":"2025-09-30 19:19:51+0000","generator":"GlotPress\/4.0.1","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);","lang":"ru"},"You are probably offline.":["\u0412\u043e\u0437\u043c\u043e\u0436\u043d\u043e, \u0447\u0442\u043e \u043f\u043e\u0434\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u0435 \u043a \u0441\u0435\u0442\u0438 \u043d\u0435\u0434\u043e\u0441\u0442\u0443\u043f\u043d\u043e."],"Media upload failed. If this is a photo or a large image, please scale it down and try again.":["\u0417\u0430\u0433\u0440\u0443\u0437\u043a\u0430 \u043c\u0435\u0434\u0438\u0430\u0444\u0430\u0439\u043b\u0430 \u043d\u0435 \u0443\u0434\u0430\u043b\u0430\u0441\u044c. \u0415\u0441\u043b\u0438 \u044d\u0442\u043e \u0444\u043e\u0442\u043e\u0433\u0440\u0430\u0444\u0438\u044f \u0438\u043b\u0438 \u0438\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0435 \u0431\u043e\u043b\u044c\u0448\u043e\u0433\u043e \u0440\u0430\u0437\u043c\u0435\u0440\u0430, \u0443\u043c\u0435\u043d\u044c\u0448\u0438\u0442\u0435 \u0435\u0433\u043e \u0438 \u043f\u043e\u043f\u0440\u043e\u0431\u0443\u0439\u0442\u0435 \u0441\u043d\u043e\u0432\u0430."],"An unknown error occurred.":["\u041f\u0440\u043e\u0438\u0437\u043e\u0448\u043b\u0430 \u043d\u0435\u0438\u0437\u0432\u0435\u0441\u0442\u043d\u0430\u044f \u043e\u0448\u0438\u0431\u043a\u0430."],"The response is not a valid JSON response.":["\u041e\u0442\u0432\u0435\u0442 \u043d\u0435 \u044f\u0432\u043b\u044f\u0435\u0442\u0441\u044f \u0434\u043e\u043f\u0443\u0441\u0442\u0438\u043c\u044b\u043c \u043e\u0442\u0432\u0435\u0442\u043e\u043c JSON."]}},"comment":{"reference":"wp-includes\/js\/dist\/api-fetch.js"}} );
-</script>
-<script src='/wp-content/plugins/essential-addons-elementor/assets/js/fancy-text.js?ver=1.0' id='essential_addons_elementor-fancy-text-js-js' defer></script>
 <script src='/wp-content/plugins/essential-addons-elementor/assets/js/lity.min.js?ver=1.0' id='essential_addons_elementor-lightbox-js-js' defer></script>
-<script src='/wp-content/plugins/essential-addons-elementor/assets/js/countdown.min.js?ver=1.0' id='essential_addons_elementor-countdown-js-js' defer></script>
-<script src='/wp-content/plugins/essential-addons-elementor/assets/js/eael-instafeed.min.js?ver=1.0' id='essential_addons_elementor-instafeed-js-js' defer></script>
-<script src='/wp-content/plugins/essential-addons-elementor/assets/js/cocoen.min.js?ver=1.0' id='essential_addons_elementor-image-comp-js-js' defer></script>
-<script src='/wp-content/plugins/essential-addons-elementor/assets/slick/slick.min.js?ver=1.0' id='essential_addons_elementor-slick-js-js' defer></script>
-<script src='/wp-content/plugins/essential-addons-elementor/assets/flip-carousel/jquery.flipster.min.js?ver=1.0' id='essential_addons_elementor-flipster-js-js'></script>
-<script src='/wp-content/plugins/essential-addons-elementor/assets/interactive-card/interactive-card.min.js?ver=1.0' id='essential_addons_elementor-interactive-card-js-js' defer></script>
-<script src='/wp-content/plugins/essential-addons-elementor/assets/interactive-card/jquery.nicescroll.min.js?ver=1.0' id='essential_addons_elementor-nicescroll-js-js'></script>
-<script src='/wp-content/plugins/essential-addons-elementor/assets/js/masonry.min.js?ver=1.0' id='essential_addons_elementor-masonry-js-js' defer></script>
-<script src='/wp-content/plugins/essential-addons-elementor/assets/js/eael-load-more.js?ver=1.0' id='essential_addons_elementor-eael-load-more-js-js' defer></script>
-<script src='/wp-content/plugins/essential-addons-elementor/assets/js/vertical-timeline.js?ver=1.0' id='essential_addons_elementor-vertical-timeline-js-js' defer></script>
 <script src='/wp-content/plugins/essential-addons-elementor/assets/js/jquery.tablesorter.min.js?ver=1.0' id='essential_addons_elementor-data-table-js-js'></script>
-<script src='/wp-content/plugins/essential-addons-elementor/assets/social-feeds/doT.min.js?ver=1.0' id='essential_addons_elementor-doT-js-js' defer></script>
-<script src='/wp-content/plugins/essential-addons-elementor/assets/social-feeds/moment.js?ver=1.0' id='essential_addons_elementor-moment-js-js' defer></script>
-<script src='/wp-content/plugins/essential-addons-elementor/assets/social-feeds/it.js?ver=1.0' id='essential_addons_elementor-moment-it-js-js' defer></script>
-<script src='/wp-content/plugins/essential-addons-elementor/assets/social-feeds/jquery.socialfeed.js?ver=1.0' id='essential_addons_elementor-socialfeed-js-js'></script>
-<script src='/wp-content/plugins/essential-addons-elementor/assets/social-feeds/codebird.js?ver=1.0' id='essential_addons_elementor-codebird-js-js' defer></script>
-<script src='/wp-content/plugins/essential-addons-elementor/assets/js/mixitup.min.js?ver=1.0' id='essential_addons_mixitup-js-js' defer></script>
-<script src='/wp-content/plugins/essential-addons-elementor/assets/js/jquery.magnific-popup.min.js?ver=1.0' id='essential_addons_magnific-popup-js-js'></script>
-<script src='/wp-content/plugins/essential-addons-elementor/assets/js/typed.min.js?ver=1.0' id='essential_addons_elementor-typed-js-js' defer></script>
 <script src='/wp-content/plugins/essential-addons-elementor/assets/js/eael-post-list.js?ver=1.0' id='essential_addons_elementor-post-list-js' defer></script>
 <script id='lbwps-js-extra'>
 var lbwpsOptions = {"label_facebook":"\u041f\u043e\u0434\u0435\u043b\u0438\u0442\u044c\u0441\u044f \u0432 Facebook","label_twitter":"\u041f\u043e\u0434\u0435\u043b\u0438\u0442\u044c\u0441\u044f \u0432 Twitter","label_pinterest":"\u041f\u043e\u0434\u0435\u043b\u0438\u0442\u044c\u0441\u044f \u0432 Pinterest","label_download":"\u0421\u043a\u0430\u0447\u0430\u0442\u044c \u0438\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0435","label_copyurl":"\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c URL","label_ui_close":"Close [Esc]","label_ui_zoom":"Zoom","label_ui_prev":"Previous [\u2190]","label_ui_next":"Next [\u2192]","label_ui_error":"The image cannot be loaded","label_ui_fullscreen":"Toggle fullscreen [F]","share_facebook":"0","share_twitter":"0","share_pinterest":"0","share_download":"0","share_direct":"0","share_copyurl":"0","close_on_drag":"1","history":"1","show_counter":"1","show_fullscreen":"1","show_zoom":"0","show_caption":"1","loop":"1","pinchtoclose":"1","taptotoggle":"1","close_on_click":"1","fulldesktop":"1","use_alt":"0","usecaption":"0","desktop_slider":"1","share_custom_label":"","share_custom_link":"","wheelmode":"zoom","spacing":"12","idletime":"2000","hide_scrollbars":"1","caption_type":"auto","bg_opacity":"50","padding_left":"0","padding_top":"0","padding_right":"0","padding_bottom":"0"};
 </script>
 <script src='/wp-content/plugins/lightbox-photoswipe/assets/ps4/scripts.js?ver=5.0.44' id='lbwps-js' defer></script>
-<script src='/wp-content/plugins/twenty20/assets/js/jquery.twenty20.js?ver=1.5.6' id='twenty20-style-js'></script>
-<script src='/wp-content/plugins/twenty20/assets/js/jquery.event.move.js?ver=1.5.6' id='twenty20-eventmove-style-js'></script>
 <script src='/wp-includes/js/imagesloaded.min.js?ver=4.1.4' id='imagesloaded-js' defer></script>
-<script src='/wp-includes/js/masonry.min.js?ver=4.2.2' id='masonry-js' defer></script>
 <script src='/wp-content/plugins/foogallery/extensions/default-templates/shared/js/foogallery.min.js?ver=2.3.3' id='foogallery-core-js' defer></script>
 <script src='/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.1.1' id='elementor-webpack-runtime-js' defer></script>
 <script src='/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.1.1' id='elementor-frontend-modules-js' defer></script>
