@@ -1540,7 +1540,7 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
 </style>
 
 	<script id="ku-embed-observer">
-(function(){var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){var f=e.target;f.src=f.getAttribute('data-src');io.unobserve(f);}});},{rootMargin:'200px'});document.querySelectorAll('iframe.ku-embed[data-src]').forEach(function(f){io.observe(f);});})();
+(function(){function L(f){if(!f.src&&f.getAttribute('data-src')){f.src=f.getAttribute('data-src');f.removeAttribute('data-src');}}var els=document.querySelectorAll('iframe.ku-embed[data-src]');var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){L(e.target);io.unobserve(e.target);}});},{rootMargin:'800px'});els.forEach(function(f){io.observe(f);});window.addEventListener('load',function(){setTimeout(function(){els.forEach(L);},5000);});})();
 </script>
 </body>
 
