@@ -6,3 +6,4 @@ desktop.ini
 # IDE
 .vscode/
 .idea/
+.wrangler/
