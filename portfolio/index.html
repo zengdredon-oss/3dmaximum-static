@@ -90,56 +90,40 @@ var to_top_options = {"scroll_offset":"1000","icon_opacity":"80","style":"icon",
 		<!-- To Top Custom CSS --><style type='text/css'>#to_top_scrollup {font-size: 40px; width: 40px; height: 40px;background-color: #44af5b;-webkit-border-radius: 15%; -moz-border-radius: 15%; border-radius: 15%;opacity: 0.8;right:20px;bottom:50px;}</style>
 
 <style>
-/* Fix: reset FooGallery hover when lightbox is open or just closed */
-body.pswp-closing .foogallery .fg-item {
-  pointer-events: none !important;
-}
-.foogallery .fg-item.fg-idle .fg-image-overlay {
+/* Fix: disable FooGallery hover effects after lightbox closes until mouse moves */
+.fg-hover-frozen .fg-item:hover .fg-image-overlay {
   visibility: hidden !important;
   opacity: 0 !important;
 }
-.foogallery .fg-item.fg-idle:hover .fg-image-overlay {
-  visibility: visible !important;
-  opacity: 1 !important;
-}
-.foogallery .fg-hover-scale .fg-item.fg-idle {
-  transform: scale(1) !important;
-}
-.foogallery .fg-hover-scale .fg-item.fg-idle:hover {
-  transform: scale(1.048) !important;
+.fg-hover-frozen.fg-hover-scale .fg-item:hover {
+  transform: none !important;
 }
 </style>
 <script>
 /* Fix hover stuck after PhotoSwipe lightbox close */
 (function(){
+  var gallery;
   var observer = new MutationObserver(function(mutations) {
     mutations.forEach(function(m) {
-      if (m.target.classList && m.target.classList.contains('pswp')) {
-        var isOpen = m.target.getAttribute('aria-hidden') === 'false';
-        if (!isOpen) {
-          document.body.classList.add('pswp-closing');
-          /* Force all fg-items back to idle state */
-          var items = document.querySelectorAll('.fg-item');
-          items.forEach(function(item) {
-            item.classList.remove('fg-hovered');
-            item.classList.add('fg-idle');
-            /* Force reflow to reset :hover */
-            item.style.pointerEvents = 'none';
-          });
-          setTimeout(function() {
-            items.forEach(function(item) {
-              item.style.pointerEvents = '';
-            });
-            document.body.classList.remove('pswp-closing');
-          }, 100);
+      if (!m.target.classList || !m.target.classList.contains('pswp')) return;
+      var wasOpen = m.oldValue && m.oldValue.indexOf('true') === -1;
+      var isClosed = m.target.getAttribute('aria-hidden') === 'true';
+      if (isClosed) {
+        gallery = document.querySelector('.foogallery');
+        if (gallery) {
+          gallery.classList.add('fg-hover-frozen');
+          document.addEventListener('mousemove', unfreeze, {once: true});
         }
       }
     });
   });
+  function unfreeze() {
+    if (gallery) gallery.classList.remove('fg-hover-frozen');
+  }
   document.addEventListener('DOMContentLoaded', function() {
     var pswpEls = document.querySelectorAll('.pswp');
     pswpEls.forEach(function(el) {
-      observer.observe(el, { attributes: true, attributeFilter: ['aria-hidden'] });
+      observer.observe(el, { attributes: true, attributeFilter: ['aria-hidden'], attributeOldValue: true });
     });
   });
 })();
