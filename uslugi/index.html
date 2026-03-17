@@ -68,7 +68,8 @@ var to_top_options = {"scroll_offset":"1000","icon_opacity":"80","style":"icon",
 <style>/* Replace dashicons arrow for scroll-to-top */
 .dashicons-arrow-up-alt:before { content: ''; display: inline-block; width: 0; height: 0; border-left: 8px solid transparent; border-right: 8px solid transparent; border-bottom: 12px solid currentColor; vertical-align: middle; }
 </style>
-<link rel="stylesheet" href="/fonts.css?v=2">
+<link rel="preload" href="/fonts.css?v=2" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/fonts.css?v=2"></noscript>
 </head>
 
 <body itemtype='https://schema.org/WebPage' itemscope='itemscope' class="page-template page-template-elementor_header_footer page page-id-83 page-parent wp-custom-logo ast-desktop ast-page-builder-template ast-no-sidebar astra-3.1.2 ast-header-custom-item-inside ast-single-post ast-inherit-site-logo-transparent ast-normal-title-enabled elementor-default elementor-template-full-width elementor-kit-2798 elementor-page elementor-page-83">
@@ -758,10 +759,10 @@ var astra = {"break_point":"921","isRtl":""};
 </script>
 <script src='/wp-content/themes/astra/assets/js/minified/style.min.js?ver=3.1.2' id='astra-theme-js-js' defer></script>
 <script src='/wp-content/plugins/essential-addons-elementor/assets/js/lity.min.js?ver=1.0' id='essential_addons_elementor-lightbox-js-js' defer></script>
-<script src='/wp-content/plugins/essential-addons-elementor/assets/js/jquery.tablesorter.min.js?ver=1.0' id='essential_addons_elementor-data-table-js-js'></script>
+<script src='/wp-content/plugins/essential-addons-elementor/assets/js/jquery.tablesorter.min.js?ver=1.0' id='essential_addons_elementor-data-table-js-js' defer></script>
 <script src='/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.1.1' id='elementor-webpack-runtime-js' defer></script>
 <script src='/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.1.1' id='elementor-frontend-modules-js' defer></script>
-<script src='/wp-includes/js/jquery/ui/core.min.js?ver=1.12.1' id='jquery-ui-core-js'></script>
+<script src='/wp-includes/js/jquery/ui/core.min.js?ver=1.12.1' id='jquery-ui-core-js' defer></script>
 <script src='/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.8.1' id='elementor-dialog-js' defer></script>
 <script src='/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2' id='elementor-waypoints-js' defer></script>
 <script src='/wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js?ver=3.1.1' id='share-link-js' defer></script>
