@@ -72,13 +72,24 @@ var to_top_options = {"scroll_offset":"1000","icon_opacity":"80","style":"icon",
 		<!-- To Top Custom CSS --><style type='text/css'>#to_top_scrollup {font-size: 40px; width: 40px; height: 40px;background-color: #44af5b;-webkit-border-radius: 15%; -moz-border-radius: 15%; border-radius: 15%;opacity: 0.8;right:20px;bottom:50px;}</style>
 
 <style>
-/* Fix: disable FooGallery hover effects after lightbox closes until mouse moves */
-.fg-hover-frozen .fg-item:hover .fg-image-overlay {
+/* Fix: disable FooGallery hover+focus effects after lightbox closes */
+/* Override .fg-item-inner:hover overlay (fg-hover-fade) */
+.fg-hover-frozen .fg-item-inner:hover .fg-image-overlay,
+.fg-hover-frozen .fg-item-inner:focus-within .fg-image-overlay {
   visibility: hidden !important;
   opacity: 0 !important;
 }
-.fg-hover-frozen.fg-hover-scale .fg-item:hover {
+/* Override .fg-item:hover scale (fg-hover-scale) */
+.fg-hover-frozen.fg-hover-scale .fg-item:hover,
+.fg-hover-frozen.fg-hover-scale .fg-item:focus-within {
   transform: none !important;
+  z-index: 4 !important;
+}
+/* Override caption hover (fg-caption-hover) */
+.fg-hover-frozen .fg-item-inner:hover .fg-caption,
+.fg-hover-frozen .fg-item-inner:focus-within .fg-caption {
+  visibility: hidden !important;
+  opacity: 0 !important;
 }
 </style>
 <script>
@@ -88,9 +99,10 @@ var to_top_options = {"scroll_offset":"1000","icon_opacity":"80","style":"icon",
   var observer = new MutationObserver(function(mutations) {
     mutations.forEach(function(m) {
       if (!m.target.classList || !m.target.classList.contains('pswp')) return;
-      var wasOpen = m.oldValue && m.oldValue.indexOf('true') === -1;
       var isClosed = m.target.getAttribute('aria-hidden') === 'true';
       if (isClosed) {
+        /* Blur focused element to reset :focus-within */
+        if (document.activeElement) document.activeElement.blur();
         gallery = document.querySelector('.foogallery');
         if (gallery) {
           gallery.classList.add('fg-hover-frozen');
